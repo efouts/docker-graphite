@@ -1,0 +1,8 @@
+#! /bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "No backup filename supplied"
+fi
+
+docker run --volumes-from graphite -v $(pwd)/backups:/backups ubuntu:14.04 tar xvf /backups/$1

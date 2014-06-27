@@ -1,0 +1,5 @@
+#! /bin/bash
+
+now=$(date +"%m_%d_%Y")
+
+docker run -ti --rm --volumes-from graphite -v $(pwd)/backups:/backups ubuntu:14.04 tar cvf /backups/backup_$now.tar /var/lib/graphite/conf /var/lib/graphite/storage /var/lib/elasticsearch
