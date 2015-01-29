@@ -41,8 +41,8 @@ RUN     pip install --install-option="--prefix=/var/lib/graphite" --install-opti
 # Install Grafana
 # ===============
 RUN     mkdir /src/grafana && cd /src/grafana &&\
-        wget http://grafanarel.s3.amazonaws.com/grafana-1.8.1.tar.gz &&\
-        tar xzvf grafana-1.8.1.tar.gz --strip-components=1 && rm grafana-1.8.1.tar.gz
+        wget http://grafanarel.s3.amazonaws.com/grafana-1.9.1.tar.gz &&\
+        tar xzvf grafana-1.9.1.tar.gz --strip-components=1 && rm grafana-1.9.1.tar.gz
 
 # Configure Elasticsearch
 # =======================
